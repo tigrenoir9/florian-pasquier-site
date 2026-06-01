@@ -1,0 +1,16 @@
+{
+    "name": "Florian Pasquier - Ingénieur électronique freelance",
+    "short_name": "FP Électronique",
+    "description": "Ingénieur électronique et systèmes embarqués freelance : bancs de test, validation, Yocto, Linux embarqué, CAN, RS232, RS485.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#07111f",
+    "theme_color": "#35d3ff",
+    "icons": [
+      {
+        "src": "/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }
+    ]
+  }
