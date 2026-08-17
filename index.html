@@ -9,7 +9,7 @@
       "name": "Florian Pasquier",
       "url": "https://www.florian-pasquier.fr/",
       "image": "https://www.florian-pasquier.fr/og-image.jpg",
-      "description": "Ingénieur électronique et systèmes embarqués freelance spécialisé en développement, debug, validation, bancs de test, Yocto/Linux embarqué, CAN, RS232 et RS485.",
+      "description": "Ingénieur électronique freelance spécialisé en conception, prototypage, cartes PCB, systèmes embarqués, debug, bancs de test et validation.",
       "areaServed": [
         "France",
         "Île-de-France",
@@ -74,8 +74,8 @@
   <meta name="theme-color" content="#07111f" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Florian Pasquier, ingénieur électronique et systèmes embarqués freelance. Développement, debug, validation, bancs de test, Python, Raspberry Pi, Yocto, Linux embarqué, CAN, RS232, RS485, UART, SPI, I2C." />
-  <meta name="keywords" content="ingénieur électronique freelance, systèmes embarqués, banc de test, validation électronique, Yocto, Linux embarqué, Raspberry Pi, CAN, RS232, RS485, FPGA, MCU, Python" />
+  <meta name="description" content="Florian Pasquier, ingénieur électronique freelance en Essonne. Conception électronique, prototypage, cartes PCB, systèmes embarqués, bancs de test, debug et validation, de l’idée au prototype fonctionnel." />
+  <meta name="keywords" content="ingénieur électronique freelance, conception électronique, prototypage électronique, carte PCB, systèmes embarqués, banc de test, validation électronique, debug électronique, Raspberry Pi, ESP32, Linux embarqué, CAN, RS232, RS485, FPGA, MCU, Python, Essonne, Île-de-France" />
   <meta name="author" content="Florian Pasquier" />
 
   <title>Florian Pasquier | Ingénieur électronique & systèmes embarqués freelance</title>
@@ -534,13 +534,23 @@
     }
 
     .project-visual {
-      height: 128px;
+      height: 220px;
       position: relative;
-      background:
-        radial-gradient(circle at 28% 40%, rgba(53,211,255,0.35), transparent 20%),
-        radial-gradient(circle at 70% 55%, rgba(109,255,184,0.25), transparent 22%),
-        linear-gradient(135deg, #11233f, #07111f);
+      overflow: hidden;
+      background: linear-gradient(135deg, #11233f, #07111f);
       border-bottom: 1px solid var(--border);
+    }
+
+    .project-visual img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .project-card:hover .project-visual img {
+      transform: scale(1.035);
     }
 
     .chip {
@@ -841,6 +851,284 @@
         overflow-x: auto;
       }
     }
+
+    /* ===== Conversion / portfolio premium ===== */
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      margin: 28px 0 0;
+      max-width: 760px;
+    }
+
+    .proof {
+      padding: 13px 15px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .proof strong {
+      display: block;
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .proof span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .trust-strip {
+      padding: 20px 0 4px;
+    }
+
+    .trust-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .trust-pill {
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255,255,255,.035);
+      font-size: 13px;
+    }
+
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .capability {
+      position: relative;
+      overflow: hidden;
+      padding: 26px;
+      min-height: 250px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(17,31,53,.9), rgba(10,21,37,.82));
+    }
+
+    .capability::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      right: -65px;
+      top: -65px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(53,211,255,.18), transparent 68%);
+    }
+
+    .capability .num {
+      color: var(--accent);
+      font-family: Consolas, Monaco, monospace;
+      font-size: 13px;
+      margin-bottom: 36px;
+    }
+
+    .capability h3 { margin-bottom: 10px; font-size: 21px; }
+    .capability p { color: var(--muted); font-size: 14px; }
+
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .sector-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .sector-card .sector-icon {
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+
+    .sector-card h3 { font-size: 18px; margin-bottom: 8px; }
+    .sector-card p { color: var(--muted); font-size: 14px; }
+
+    .cta-band {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border-radius: 26px;
+      border: 1px solid rgba(53,211,255,.34);
+      background:
+        radial-gradient(circle at 90% 20%, rgba(109,255,184,.14), transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(53,211,255,.16), transparent 32%),
+        rgba(15,31,52,.86);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-band-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(27px, 3.3vw, 42px);
+      line-height: 1.1;
+      margin-bottom: 9px;
+    }
+
+    .cta-band p {
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .case-note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 15px;
+      border: 1px dashed rgba(109,255,184,.3);
+      background: rgba(109,255,184,.055);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .project-visual {
+      cursor: zoom-in;
+    }
+
+    .project-visual::after {
+      content: "↗ Agrandir";
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      z-index: 2;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: #fff;
+      background: rgba(5,13,24,.72);
+      border: 1px solid rgba(255,255,255,.18);
+      opacity: 0;
+      transform: translateY(4px);
+      transition: .22s ease;
+    }
+
+    .project-card:hover .project-visual::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,.88);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: min(1200px, 96vw);
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 18px;
+      box-shadow: 0 28px 90px rgba(0,0,0,.6);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.2);
+      color: #fff;
+      background: rgba(255,255,255,.08);
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    .contact-dock {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 300;
+      display: flex;
+      gap: 9px;
+      padding: 8px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(7,17,31,.82);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 16px 50px rgba(0,0,0,.35);
+    }
+
+    .dock-btn {
+      min-width: 44px;
+      height: 44px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .dock-btn.primary {
+      color: #06111f;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-color: transparent;
+    }
+
+    .availability-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      text-align: left;
+    }
+
+    .availability-list span {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .capabilities-grid, .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-band-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 720px) {
+      .hero-proof, .capabilities-grid, .sectors-grid { grid-template-columns: 1fr; }
+      .contact-dock {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        justify-content: stretch;
+      }
+      .dock-btn { flex: 1; }
+      body { padding-bottom: 74px; }
+    }
+
   </style>
 </head>
 
@@ -871,28 +1159,34 @@
     <header class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow"><span class="pulse"></span> Disponible pour missions freelance</div>
+          <div class="eyebrow"><span class="pulse"></span> Ingénieur freelance — disponible pour de nouveaux projets</div>
           <h1>
-            Ingénieur <span class="gradient-text">électronique</span><br />
-            & systèmes embarqués
+            De l’idée au <span class="gradient-text">prototype fonctionnel</span>
           </h1>
           <p>
-            J’aide les entreprises à développer, débugger et valider leurs prototypes électroniques,
-            bancs de test et systèmes embarqués : Python, Raspberry Pi, Linux embarqué, Yocto,
-            CAN, RS232, RS485, UART, SPI, I2C, MCU et FPGA.
+            Je conçois, intègre, débugge et valide des systèmes électroniques sur mesure :
+            cartes PCB, systèmes embarqués, automatismes, interfaces, bancs de test et prototypes.
+            Un interlocuteur technique unique pour transformer un besoin concret en solution testée.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:florian.pasquier91@gmail.com?subject=Demande%20de%20mission%20freelance">Discuter de votre projet →</a>
-            <a class="btn btn-secondary" href="#projects">Voir mes exemples</a>
+            <a class="btn btn-primary" href="mailto:florian.pasquier91@gmail.com?subject=Parlons%20de%20votre%20projet">Me parler de votre projet →</a>
+            <a class="btn btn-secondary" href="tel:+33685574379">📞 06.85.57.43.79</a>
+            <a class="btn btn-secondary" href="#projects">Voir mes réalisations</a>
           </div>
 
           <div class="hero-tags">
+            <span class="tag">Conception électronique</span>
+            <span class="tag">PCB & prototypage</span>
+            <span class="tag">Systèmes embarqués</span>
+            <span class="tag">Debug & validation</span>
             <span class="tag">Bancs de test</span>
-            <span class="tag">Validation ATP/QTP</span>
-            <span class="tag">Linux embarqué / Yocto</span>
-            <span class="tag">CAN / UART / RS485</span>
-            <span class="tag">Python / Flask / SQLite</span>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof"><strong>14+ ans</strong><span>d’expérience électronique</span></div>
+            <div class="proof"><strong>Prototype → validation</strong><span>approche terrain et mesurable</span></div>
+            <div class="proof"><strong>France / Remote</strong><span>sur site possible en Île-de-France</span></div>
           </div>
         </div>
 
@@ -918,6 +1212,17 @@
         </div>
       </div>
     </header>
+
+    <div class="trust-strip">
+      <div class="container trust-inner">
+        <span class="trust-pill">⚡ Électronique analogique & numérique</span>
+        <span class="trust-pill">🧠 MCU / ESP32 / Raspberry Pi</span>
+        <span class="trust-pill">🧪 Mesure & validation</span>
+        <span class="trust-pill">🛠️ Prototype & intégration</span>
+        <span class="trust-pill">📡 CAN / RS232 / RS485 / Ethernet</span>
+        <span class="trust-pill">🐍 Python / Linux embarqué</span>
+      </div>
+    </div>
 
     <section id="services">
       <div class="container">
@@ -978,6 +1283,39 @@
       </div>
     </section>
 
+
+    <section id="build">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ce que je peux construire pour vous</h2>
+          <p>Pas seulement du conseil : je peux aller jusqu’au prototype câblé, programmé, testé et documenté.</p>
+        </div>
+
+        <div class="capabilities-grid">
+          <article class="capability">
+            <div class="num">01 — CONCEVOIR</div>
+            <h3>Carte électronique sur mesure</h3>
+            <p>Architecture, schéma, choix composants, PCB, interfaces, alimentation et préparation du prototype.</p>
+          </article>
+          <article class="capability">
+            <div class="num">02 — INTÉGRER</div>
+            <h3>Système embarqué complet</h3>
+            <p>Microcontrôleur, Raspberry Pi, Linux, capteurs, actionneurs, communication, IHM et intégration mécanique.</p>
+          </article>
+          <article class="capability">
+            <div class="num">03 — DÉBUGGER</div>
+            <h3>Prototype qui ne fonctionne pas</h3>
+            <p>Mesures, oscilloscope, analyse de bus, recherche de cause racine et corrections hardware/software pragmatiques.</p>
+          </article>
+          <article class="capability">
+            <div class="num">04 — VALIDER</div>
+            <h3>Banc de test & automatisation</h3>
+            <p>Scripts Python, Raspberry Pi, instrumentation, campagnes automatiques, logs, critères PASS/FAIL et rapports.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="method">
       <div class="container">
         <div class="section-head">
@@ -1013,37 +1351,131 @@
     <section id="projects">
       <div class="container">
         <div class="section-head">
-          <h2>Exemples de réalisations</h2>
-          <p>Exemples anonymisés, orientés résultats, pour montrer le type d’intervention possible.</p>
+          <h2>Réalisations & prototypes</h2>
+          <p>Des réalisations réelles : cartes électroniques, systèmes embarqués, mécatronique, bancs de validation et intégration. Certaines informations sont volontairement anonymisées.</p>
         </div>
 
         <div class="projects-grid">
           <article class="project-card">
-            <div class="project-visual"><div class="chip"></div></div>
+            <div class="project-visual"><img src="assets/projects/carte-esp32-sur-mesure.webp" alt="Carte électronique sur mesure basée sur ESP32" loading="lazy"></div>
             <div class="project-body">
-              <h3>Banc de validation industriel</h3>
-              <p>Mise en place d’un Raspberry Pi comme moyen de test automatisé avec API REST, base SQLite, campagnes de test et validation d’interfaces.</p>
-              <div class="project-list"><span class="small-pill">Raspberry Pi</span><span class="small-pill">Python</span><span class="small-pill">SQLite</span><span class="small-pill">CAN</span></div>
+              <h3>Carte électronique sur mesure</h3>
+              <p>Conception et prototypage d’une carte embarquée autour d’un ESP32 avec interfaces capteurs/actionneurs et connectique dédiée.</p>
+              <div class="project-list"><span class="small-pill">ESP32</span><span class="small-pill">PCB</span><span class="small-pill">Capteurs</span><span class="small-pill">Firmware</span></div>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-visual"><div class="chip"></div></div>
+            <div class="project-visual"><img src="assets/projects/commande-mecatronique.webp" alt="Prototype de commande mécatronique avec électronique embarquée" loading="lazy"></div>
             <div class="project-body">
-              <h3>Debug Yocto / i.MX</h3>
-              <p>Analyse de problèmes de compilation, device tree, overlays, UART, CAN, services systemd et intégration logicielle sur cible embarquée.</p>
-              <div class="project-list"><span class="small-pill">Yocto</span><span class="small-pill">Device tree</span><span class="small-pill">Linux</span><span class="small-pill">systemd</span></div>
+              <h3>Commande mécatronique</h3>
+              <p>Intégration d’une électronique de commande, d’interfaces utilisateur et d’actionneurs dans un prototype fonctionnel.</p>
+              <div class="project-list"><span class="small-pill">Mécatronique</span><span class="small-pill">ESP32</span><span class="small-pill">IHM</span><span class="small-pill">Prototypage</span></div>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-visual"><div class="chip"></div></div>
+            <div class="project-visual"><img src="assets/projects/banc-validation-electronique.webp" alt="Banc de validation électronique avec oscilloscope et instrumentation" loading="lazy"></div>
             <div class="project-body">
-              <h3>Validation de prototype</h3>
-              <p>Définition de tests, mesures à l’oscilloscope, rédaction de procédures ATP/QTP et amélioration de la traçabilité des essais.</p>
-              <div class="project-list"><span class="small-pill">ATP/QTP</span><span class="small-pill">Oscilloscope</span><span class="small-pill">Debug</span><span class="small-pill">Rapport</span></div>
+              <h3>Banc de validation électronique</h3>
+              <p>Mise au point et validation de cartes avec instrumentation, mesures électriques, automatisation et recherche de causes racines.</p>
+              <div class="project-list"><span class="small-pill">Oscilloscope</span><span class="small-pill">Debug</span><span class="small-pill">Validation</span><span class="small-pill">IVVQ</span></div>
             </div>
           </article>
+
+          <article class="project-card">
+            <div class="project-visual"><img src="assets/projects/pcb-ethernet-embarque.webp" alt="Prototype de carte embarquée avec interfaces Ethernet" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Système embarqué communicant</h3>
+              <p>Développement et intégration de cartes communicantes avec Ethernet et électronique de commande pour applications connectées.</p>
+              <div class="project-list"><span class="small-pill">Ethernet</span><span class="small-pill">PCB</span><span class="small-pill">Réseau</span><span class="small-pill">Embarqué</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual"><img src="assets/projects/compute-module-integration.webp" alt="Intégration d'un Raspberry Pi Compute Module sur carte porteuse" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Intégration Compute Module</h3>
+              <p>Intégration matérielle d’un module de calcul sur carte porteuse : alimentation, connectique, interfaces et contraintes d’encombrement.</p>
+              <div class="project-list"><span class="small-pill">Raspberry Pi</span><span class="small-pill">Compute Module</span><span class="small-pill">Linux</span><span class="small-pill">Intégration</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual"><img src="assets/projects/interface-embarquee-ecran.webp" alt="Interface électronique embarquée avec écran et commandes physiques" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Interface utilisateur embarquée</h3>
+              <p>Prototype d’IHM autonome associant écran, commandes physiques, carte électronique et boîtier mécanique imprimé en 3D.</p>
+              <div class="project-list"><span class="small-pill">IHM</span><span class="small-pill">Écran</span><span class="small-pill">3D</span><span class="small-pill">Électronique</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual"><img src="assets/projects/automatisation-aquarium.webp" alt="Aquarium automatisé piloté par électronique et logiciel embarqué" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Automatisation & supervision</h3>
+              <p>Système autonome de supervision et de commande avec capteurs, relais, interface locale et automatisation de fonctions.</p>
+              <div class="project-list"><span class="small-pill">Raspberry Pi</span><span class="small-pill">Capteurs</span><span class="small-pill">Relais</span><span class="small-pill">Python</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual"><img src="assets/projects/integration-audiovisuelle.webp" alt="Prototype d'intégration audiovisuelle interactive" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Intégration audiovisuelle interactive</h3>
+              <p>Participation à la mise au point d’un dispositif interactif associant électronique, logiciel temps réel et restitution audiovisuelle grand format.</p>
+              <div class="project-list"><span class="small-pill">Intégration</span><span class="small-pill">Temps réel</span><span class="small-pill">Tests</span><span class="small-pill">Audiovisuel</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="sectors">
+      <div class="container">
+        <div class="section-head">
+          <h2>Des applications très concrètes</h2>
+          <p>J’interviens dès qu’un produit, une machine ou une expérience a besoin d’électronique fiable et adaptée au terrain.</p>
+        </div>
+        <div class="sectors-grid">
+          <article class="sector-card">
+            <div class="sector-icon">🏭</div>
+            <h3>Industrie & bureaux d’études</h3>
+            <p>Prototypes, moyens de test, validation, interfaces de communication et renfort technique ponctuel.</p>
+          </article>
+          <article class="sector-card">
+            <div class="sector-icon">🎮</div>
+            <h3>Escape game & loisirs</h3>
+            <p>Capteurs, RFID/NFC, boutons, automatismes, audio, éclairage, moteurs, systèmes de scoring et maintenance.</p>
+          </article>
+          <article class="sector-card">
+            <div class="sector-icon">🎸</div>
+            <h3>Instruments & objets connectés</h3>
+            <p>Préamplification, capteurs, électronique embarquée, commandes, interfaces et prototypes sur mesure.</p>
+          </article>
+          <article class="sector-card">
+            <div class="sector-icon">🎬</div>
+            <h3>Audiovisuel & événementiel</h3>
+            <p>Interfaces interactives, commandes temps réel, intégration audiovisuelle et dispositifs spéciaux.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:22px;">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-band-inner">
+            <div>
+              <h2>Vous avez une idée, un prototype ou une panne ?</h2>
+              <p>Envoyez-moi quelques lignes sur le besoin, les contraintes et le délai. Je vous réponds avec une première piste d’approche.</p>
+            </div>
+            <div class="hero-actions" style="margin:0;">
+              <a class="btn btn-primary" href="mailto:florian.pasquier91@gmail.com?subject=Projet%20électronique%20-%20prise%20de%20contact">Écrire maintenant →</a>
+              <a class="btn btn-secondary" href="tel:+33685574379">Appeler</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1138,7 +1570,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="mailto:florian.pasquier91@gmail.com?subject=Demande%20de%20mission%20freelance&body=Bonjour%20Florian,%0D%0A%0D%0AJe%20vous%20contacte%20pour%20une%20mission%20concernant%20...%0D%0A%0D%0AMat%C3%A9riel%20:%0D%0AObjectif%20:%0D%0AD%C3%A9lai%20:%0D%0A%0D%0ACordialement,">Envoyer un email</a>
-            <a class="btn btn-secondary" href="#services">Relire les services</a>
+            <a class="btn btn-secondary" href="tel:+33685574379">📞 Appeler maintenant</a>
           </div>
 
           <div class="contact-list">
@@ -1164,7 +1596,7 @@
             <p style="margin-top: 12px;">
               Diagnostic, développement, debug, validation, documentation technique ou renfort projet.
             </p>
-            <div class="hero-tags" style="justify-content:center; margin-top: 20px;">
+            <div class="availability-list"><span>✓ Étude / conception électronique</span><span>✓ Prototype hardware + software</span><span>✓ Debug / reprise de projet existant</span><span>✓ Banc de test / validation</span></div><div class="hero-tags" style="justify-content:center; margin-top: 20px;">
               <span class="tag">Remote</span>
               <span class="tag">Sur site possible</span>
               <span class="tag">Essonne / Île-de-France</span>
@@ -1174,6 +1606,17 @@
       </div>
     </section>
   </main>
+
+
+  <div class="contact-dock" aria-label="Contact rapide">
+    <a class="dock-btn primary" href="mailto:florian.pasquier91@gmail.com?subject=Projet%20électronique">✉️ Email</a>
+    <a class="dock-btn" href="tel:+33685574379">📞 Appeler</a>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">×</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
 
   <footer>
     <div class="container footer-inner">
@@ -1200,6 +1643,36 @@
       card.style.transition = `opacity 0.45s ease ${index * 0.025}s, transform 0.45s ease ${index * 0.025}s, border-color 0.22s ease, background 0.22s ease`;
       observer.observe(card);
     });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.project-visual img').forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+    });
+
   </script>
 </body>
 </html>
